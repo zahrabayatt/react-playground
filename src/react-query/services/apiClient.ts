@@ -11,8 +11,8 @@ class APIClient<T> {
     this.endpoint = endpoint;
   }
 
-  getAll = (params?: AxiosRequestConfig) =>
-    axiosInstance.get<T[]>(this.endpoint, params).then((res) => res.data);
+  getAll = (config?: AxiosRequestConfig) =>
+    axiosInstance.get<T[]>(this.endpoint, config).then((res) => res.data);
 
   post = (data: T) =>
     axiosInstance.post<T>(this.endpoint, data).then((res) => res.data);
