@@ -6,7 +6,7 @@ interface Props {
   children: ReactNode;
 }
 
-const TasksContextProvider = ({ children }: Props) => {
+const TasksProvider = ({ children }: Props) => {
   const [tasks, dispatch] = useReducer(taskListReducer, []);
 
   return (
@@ -16,4 +16,4 @@ const TasksContextProvider = ({ children }: Props) => {
   );
 };
 
-export default TasksContextProvider;
+export default TasksProvider;

@@ -6,7 +6,7 @@ interface Props {
   children: ReactNode;
 }
 
-const AuthContextProvider = ({ children }: Props) => {
+const AuthProvider = ({ children }: Props) => {
   const [user, dispatch] = useReducer(authReducer, "");
 
   return (
@@ -16,4 +16,4 @@ const AuthContextProvider = ({ children }: Props) => {
   );
 };
 
-export default AuthContextProvider;
+export default AuthProvider;

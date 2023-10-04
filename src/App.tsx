@@ -1,17 +1,17 @@
 import "./App.css";
-import AuthContextProvider from "./state-management/AuthContextProvider";
+import AuthProvider from "./state-management/AuthProvider";
 import HomePage from "./state-management/HomePage";
 import NavBar from "./state-management/NavBar";
-import TasksContextProvider from "./state-management/TasksContextProvider";
+import TasksProvider from "./state-management/TasksProvider";
 
 function App() {
   return (
-    <AuthContextProvider>
-      <TasksContextProvider>
+    <AuthProvider>
+      <TasksProvider>
         <NavBar />
         <HomePage />
-      </TasksContextProvider>
-    </AuthContextProvider>
+      </TasksProvider>
+    </AuthProvider>
   );
 }
 
