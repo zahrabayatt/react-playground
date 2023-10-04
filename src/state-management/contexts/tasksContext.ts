@@ -7,8 +7,8 @@ interface TasksContextType {
   dispatch: Dispatch<TaskAction>;
 }
 
-const tasksContext = React.createContext<TasksContextType>(
+const TasksContext = React.createContext<TasksContextType>(
   {} as TasksContextType
 );
 
-export default tasksContext;
+export default TasksContext;
