@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const NavBar = () => {
   return (
     <nav
@@ -5,20 +7,20 @@ const NavBar = () => {
       style={{ background: "#f0f0f0", marginBottom: "1rem" }}
     >
       <div className="container-fluid">
-        <a href="#" className="navbar-brand">
+        <Link to="/" className="navbar-brand">
           My App
-        </a>
-        <div className="collapse navar-collapse" id="navbarNav">
+        </Link>
+        <div className="navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a href="#" className="nav-link active">
+              <Link to="/" className="nav-link active">
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a href="#" className="nav-link">
+              <Link to="/users" className="nav-link active">
                 Users
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

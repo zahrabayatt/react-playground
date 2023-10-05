@@ -3,12 +3,18 @@ import UserListPage from "./UserListPage";
 import HomePage from "./HomePage";
 import ContactPage from "./ContactPage";
 import UserDetailPage from "./UserDetailPage";
+import Layout from "./Layout";
 
 const routes = createBrowserRouter([
-  { path: "/", element: <HomePage /> },
-  { path: "/users", element: <UserListPage /> },
-  { path: "/content", element: <ContactPage /> },
-  { path: "/users/:id", element: <UserDetailPage /> },
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      { index: true, element: <HomePage /> },
+      { path: "users", element: <UserListPage /> },
+      { path: "users/:id", element: <UserDetailPage /> },
+    ],
+  },
 ]);
 
 export default routes;
