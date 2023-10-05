@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const HomePage = () => {
   return (
     <>
@@ -5,7 +7,7 @@ const HomePage = () => {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus,
         tempora!
       </p>
-      <a href="/users">Users</a>
+      <Link to="/users">Users</Link>
     </>
   );
 };
