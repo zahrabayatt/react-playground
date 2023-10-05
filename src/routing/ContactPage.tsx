@@ -7,7 +7,7 @@ const ContactPage = () => {
     <form
       onSubmit={(event) => {
         event.preventDefault();
-        navigate("/");
+        navigate("/"); // it has side effects, use it inside useEffect or event handler
       }}
     >
       <button className="btn btn-primary">Submit</button>
